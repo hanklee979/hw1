@@ -1,28 +1,37 @@
-package hw1;
+package U10216032_hw1;
 
 import java.util.Scanner;
 
-
-public class hw1{
+public class U10216032_hw1{
 	public static void main(String[] args){
 
 		Scanner input = new Scanner(System.in);
 		
+		// allow user to input x to get f(x)
 		double x;
 		x = input.nextDouble();
+
+		x_square get_a = new x_square();
+		x_sin get_b = new x_sin();
+		x_cos get_c = new x_cos();		
+		x_tan get_d = new x_tan();		
+		x_cos_5sin get_e = new x_cos_5sin();		
+		x_5cos_sin get_f = new x_5cos_sin();
+		x_log_square get_g = new x_log_square();
 		
-		System.out.println("f(x) = x^2 = " + x_square.f(x));
-		System.out.println("f(x) = sin(x) = " + x_sin.f(x));
-		System.out.println("f(x) = cos(x) = " + x_cos.f(x));
-		System.out.println("f(x) = tan(x) = " + x_tan.f(x));
-		System.out.println("f(x) = cos(x) + 5sin(x) = " + x_cos_5sin.f(x));
-		System.out.println("f(x) = 5cos(x) + sin(x) = " + x_5cos_sin.f(x));
-		System.out.println("f(x) = log(x) + x^2 = " + x_log_square.f(x));
+		// show f(x)
+		System.out.println ( "f(x) = x ^ 2 = " + get_a.f(x) );
+		System.out.println ( "f(x) = sin(x) = " + get_b.f(x) );
+		System.out.println ( "f(x) = cos(x) = " + get_c.f(x) );
+		System.out.println ( "f(x) = tan(x) = " + get_d.f(x) );		
+		System.out.println ( "f(x) = cos(x) + 5sin(x) = " + get_e.f(x) );
+		System.out.println ( "f(x) = 5cos(x) + sin(x) = " + get_f.f(x) );
+		System.out.println ( "f(x) = log(x) + x ^ 2 = " + get_g.f(x) );		
 	}
 }
 
 
-
+// override method in abstract class AbstractDrawFunction to calculate f(x)
 class x_square extends AbstractDrawFunction{
 	@Override
 	double f(double x){
@@ -76,3 +85,5 @@ class x_log_square extends AbstractDrawFunction{
 		return Math.log(x) + x * x;
 	}	
 }
+
+

@@ -1,4 +1,4 @@
-package hw1;
+package U10216032_hw1;
 
 import javax.swing.JPanel;
 import java.awt.Polygon;
@@ -17,7 +17,7 @@ public abstract class AbstractDrawFunction extends JPanel{
 	/** Obtain points for x-coordinates 100, 101, . . ., 300 */
 	public void drawFunction(){
 		for(int x = -100; x <= 100; x++){
-			p.addPoint(x + 200), 200 - (int)f(x);
+			p.addPoint(x + 200 , 200 - (int)f(x) );
 		}		
 	}
 
